@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ანდრია ურუმაშვილი — ჩემ შესახებ, უნარები და სწავლა"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>ანდრია ურუმაშვილი | ჩემ შესახებ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 border-b border-outline-variant/40 bg-surface/80 shadow-[0_1px_8px_rgba(0,0,0,0.02)] backdrop-blur-xl"
+    >
+      <div
+        class="mx-auto flex h-16 max-w-[1140px] items-center justify-between gap-2 px-margin-mobile md:px-margin"
+      >
+        <a
+          class="group flex min-w-0 items-center gap-space-sm text-inherit no-underline"
+          href="index.html"
+        >
+          <div
+            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-container font-headline-sm text-primary transition-colors group-hover:bg-primary-fixed"
+          >
+            <span class="font-label-md text-label-md font-semibold tracking-tight"
+              >AU</span
+            >
+          </div>
+          <span
+            class="truncate font-title-md text-title-md font-semibold tracking-tight text-on-surface max-[360px]:max-w-[9rem] sm:max-w-none"
+            >ანდრია ურუმაშვილი</span
+          >
+        </a>
+
+        <nav
+          class="hidden items-center gap-space-xs rounded-lg bg-surface-container-low/70 p-1 md:flex"
+          aria-label="მთავარი ნავიგაცია"
+        >
+          <a
+            class="whitespace-nowrap rounded px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant transition-all hover:bg-surface-container hover:text-on-surface"
+            href="index.html"
+            >მთავარი</a
+          >
+          <a
+            aria-current="page"
+            class="whitespace-nowrap rounded bg-surface-container-high px-3 py-1.5 font-medium text-on-surface transition-all"
+            href="about.html"
+            >ჩემ შესახებ</a
+          >
+          <a
+            class="whitespace-nowrap rounded px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant transition-all hover:bg-surface-container hover:text-on-surface"
+            href="index.html#projects"
+            >პროექტები</a
+          >
+          <a
+            class="whitespace-nowrap rounded px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant transition-all hover:bg-surface-container hover:text-on-surface"
+            href="index.html#contact"
+            >კონტაქტი</a
+          >
+        </nav>
+
+        <button
+          type="button"
+          id="menu-toggle"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-outline-variant/50 bg-surface-container-low text-on-surface transition-colors hover:bg-surface-container md:hidden"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="მენიუს გახსნა"
+        >
+          <span id="menu-icon-open" class="material-symbols-outlined text-[24px]"
+            >menu</span
+          >
+          <span
+            id="menu-icon-close"
+            class="material-symbols-outlined hidden text-[24px]"
+            >close</span
+          >
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-outline-variant/40 bg-surface md:hidden"
+        aria-hidden="true"
+      >
+        <nav
+          class="mx-auto flex max-w-[1140px] flex-col gap-1 px-margin-mobile py-3"
+          aria-label="მობილური ნავიგაცია"
+        >
+          <a
+            class="rounded-lg px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+            href="index.html"
+            >მთავარი</a
+          >
+          <a
+            aria-current="page"
+            class="rounded-lg bg-surface-container-high px-4 py-3 font-medium text-on-surface"
+            href="about.html"
+            >ჩემ შესახებ</a
+          >
+          <a
+            class="rounded-lg px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+            href="index.html#projects"
+            >პროექტები</a
+          >
+          <a
+            class="rounded-lg px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+            href="index.html#contact"
+            >კონტაქტი</a
+          >
+          <a
+            class="mt-1 rounded-lg border border-outline-variant/40 px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+            href="https://github.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            >GitHub</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="min-h-screen w-full bg-background pt-16">
+      <div class="mx-auto w-full max-w-[1140px] px-margin-mobile py-space-xl md:px-margin">
+        <section class="mb-space-2xl flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-sm">
+            <span
+              class="font-label-sm text-label-sm font-semibold uppercase tracking-widest text-primary"
+              >01 // პროფილი და პერსპექტივა</span
+            >
+            <div class="h-px max-w-[120px] flex-1 bg-surface-container-high"></div>
+          </div>
+          <h1
+            class="font-display-lg text-display-lg-mobile font-bold tracking-tight text-on-surface md:text-display-lg"
+          >
+            ჩემ შესახებ
+          </h1>
+          <p
+            class="max-w-2xl font-body-lg text-body-lg leading-relaxed text-on-surface-variant"
+          >
+            ჩემი გზა ვებ-დეველოპმენტში, პრინციპები და ინტერესები.
+          </p>
+        </section>
+
+        <section
+          class="mb-space-3xl grid grid-cols-1 items-start gap-space-lg lg:grid-cols-12"
+        >
+          <div class="flex flex-col gap-space-lg lg:col-span-7">
+            <div
+              class="flex flex-col gap-space-md rounded-xl bg-surface-container-lowest p-space-xl shadow-sm"
+            >
+              <div class="flex items-center justify-between pb-space-sm">
+                <span
+                  class="font-label-md text-label-md font-semibold text-primary"
+                  >// ანდრია ურუმაშვილი</span
+                >
+                <div
+                  class="flex items-center gap-1.5 rounded-full bg-surface-container px-3 py-1 font-label-sm text-label-sm text-on-surface-variant"
+                >
+                  <span class="material-symbols-outlined text-[14px] text-tertiary"
+                    >location_on</span
+                  >
+                  თბილისი, საქართველო
+                </div>
+              </div>
+              <p class="font-body-md text-body-md leading-relaxed text-on-surface">
+                გამარჯობა! მე ვარ ანდრია ურუმაშვილი, დამწყები ვებ-დეველოპერი
+                თბილისიდან. ჩემი ინტერესი ვებ-ტექნოლოგიების მიმართ დაიწყო
+                სურვილით, შემექმნა ისეთი ვებგვერდები, რომლებიც მომხმარებლისთვის
+                მარტივი, სწრაფი და სასიამოვნო გამოსაყენებელია.
+              </p>
+              <p
+                class="font-body-md text-body-md leading-relaxed text-on-surface-variant"
+              >
+                ყოველდღიურად ვმუშაობ ჩემი უნარების გაუმჯობესებაზე, ვწერ სუფთა და
+                სემანტიკურ კოდს და დიდ ყურადღებას ვაქცევ დეტალებს —
+                ტიპოგრაფიიდან დაწყებული, ადაპტირებადი ბადით დამთავრებული.
+              </p>
+              <div
+                class="mt-space-sm flex flex-col gap-1.5 rounded-lg bg-inverse-surface p-space-md font-label-md text-label-md text-inverse-on-surface shadow-sm"
+              >
+                <div
+                  class="flex items-center justify-between pb-1 font-label-sm text-label-sm text-outline-variant"
+                >
+                  <span>andria.config.ts</span>
+                  <span class="flex items-center gap-1"
+                    ><span class="h-2 w-2 rounded-full bg-primary-fixed"></span
+                    >TS</span
+                  >
+                </div>
+                <div class="leading-relaxed">
+                  <span class="font-medium text-tertiary-fixed">const</span>
+                  developer = {<br />
+                  &nbsp;&nbsp;name:
+                  <span class="text-secondary-fixed">"ანდრია ურუმაშვილი"</span
+                  >,<br />
+                  &nbsp;&nbsp;mindset:
+                  <span class="text-secondary-fixed">"სუფთა კოდი &amp; ზრდა"</span
+                  >,<br />
+                  &nbsp;&nbsp;available:
+                  <span class="text-primary-fixed">true</span><br />
+                  };
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-space-md sm:grid-cols-3">
+              <div
+                class="flex flex-col justify-between gap-space-sm rounded-xl bg-surface-container-low p-space-md shadow-sm"
+              >
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-container-highest text-primary"
+                >
+                  <span class="material-symbols-outlined text-[20px]">code</span>
+                </div>
+                <div>
+                  <h3
+                    class="mb-1 font-headline-sm text-headline-sm font-semibold text-on-surface"
+                  >
+                    სუფთა კოდი და სემანტიკა
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    მკაფიო HTML სტრუქტურა და ხელმისაწვდომი იერარქია.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col justify-between gap-space-sm rounded-xl bg-surface-container-low p-space-md shadow-sm"
+              >
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-container-highest text-primary"
+                >
+                  <span class="material-symbols-outlined text-[20px]">devices</span>
+                </div>
+                <div>
+                  <h3
+                    class="mb-1 font-headline-sm text-headline-sm font-semibold text-on-surface"
+                  >
+                    ადაპტირებადობა (Responsive)
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    უწყვეტი გამოცდილება ნებისმიერ ეკრანის ზომაზე.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col justify-between gap-space-sm rounded-xl bg-surface-container-low p-space-md shadow-sm"
+              >
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-container-highest text-primary"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >trending_up</span
+                  >
+                </div>
+                <div>
+                  <h3
+                    class="mb-1 font-headline-sm text-headline-sm font-semibold text-on-surface"
+                  >
+                    მუდმივი სწავლა და ზრდა
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    ახალი ტექნოლოგიების ყოველდღიური ათვისება.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-space-md lg:col-span-5">
+            <div
+              class="relative h-[360px] overflow-hidden rounded-xl bg-surface-container-high shadow-md"
+            >
+              <img
+                class="h-full w-full object-cover"
+                alt="ანდრია ურუმაშვილი — ვებ-დეველოპერი"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxWVUOB8Gal8atAcazdgJe95sc90jM1nNpk3kqOJ-qIVU6o5Uti-2-DaxsM-aAmMQGVRL2idVe-mwV81fSxy3HDNL-l8ok63GLGBZoYytOGmarHfyouRfe5FOGE9mcGb62RWRYEki9vV-a73IQC5nYOFQAUJwuTEFAMp37NqK3bI5LlA9NBjmNY4gx-xaPF_ifkvX8PQi1mnFEgt86rZuyYkFtKKI4xN7bXsiXxR8N"
+              />
+              <div
+                class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent p-space-lg text-surface-bright"
+              >
+                <span
+                  class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed"
+                  >პრაქტიკოსი დეველოპერი</span
+                >
+                <span
+                  class="font-headline-md text-headline-md font-semibold text-surface-bright"
+                  >ანდრია ურუმაშვილი</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between gap-space-md rounded-xl bg-surface-container-lowest p-space-lg shadow-sm"
+            >
+              <div class="flex flex-col">
+                <span
+                  class="font-label-sm text-label-sm uppercase text-on-surface-variant"
+                  >კვირის აქტივობა</span
+                >
+                <span
+                  class="font-title-md text-title-md font-semibold text-on-surface"
+                  >30+ საათი კოდირება</span
+                >
+                <span class="font-body-sm text-body-sm text-on-surface-variant"
+                  >კომპონენტების პრაქტიკა და დოკუმენტაცია</span
+                >
+              </div>
+              <svg class="h-20 w-20 shrink-0 text-primary" viewBox="0 0 36 36">
+                <path
+                  class="text-surface-container"
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3.5"
+                ></path>
+                <path
+                  class="text-primary-container"
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-dasharray="82, 100"
+                  stroke-linecap="round"
+                  stroke-width="3.5"
+                ></path>
+                <text
+                  class="font-label-sm text-[8px] font-semibold"
+                  fill="currentColor"
+                  text-anchor="middle"
+                  x="18"
+                  y="20.5"
+                >
+                  82%
+                </text>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-space-3xl">
+          <div class="mb-space-lg flex items-center gap-space-sm">
+            <span
+              class="font-label-sm text-label-sm font-semibold uppercase tracking-widest text-primary"
+              >02 // ტექნოლოგიური არსენალი</span
+            >
+            <div class="h-px max-w-[120px] flex-1 bg-surface-container-high"></div>
+          </div>
+          <h2
+            class="mb-space-md font-headline-lg text-headline-lg font-bold text-on-surface"
+          >
+            ტექნოლოგიური უნარები
+          </h2>
+          <div class="grid grid-cols-1 gap-space-md md:grid-cols-3">
+            <div
+              class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div>
+                <div class="mb-space-md flex items-center justify-between">
+                  <div
+                    class="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-container-high font-label-md text-label-md font-bold text-primary"
+                  >
+                    &lt;/&gt;
+                  </div>
+                  <span
+                    class="rounded bg-surface-container px-2.5 py-1 font-label-sm text-label-sm font-medium text-on-surface"
+                    >საფუძველი</span
+                  >
+                </div>
+                <h3
+                  class="mb-space-xs font-headline-md text-headline-md font-semibold text-on-surface"
+                >
+                  HTML5
+                </h3>
+                <p
+                  class="mb-space-md font-body-sm text-body-sm leading-relaxed text-on-surface-variant"
+                >
+                  სემანტიკური მარკირება, ხელმისაწვდომობის (a11y) სტანდარტების
+                  დაცვა და საძიებო სისტემებისთვის გამართული SEO საფუძვლები.
+                </p>
+              </div>
+              <div
+                class="flex flex-col gap-1.5 rounded-lg bg-surface-container-low p-space-sm pt-space-sm"
+              >
+                <div
+                  class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"
+                >
+                  <span>მზადყოფნის დონე</span>
+                  <span class="font-semibold text-on-surface">სოლიდური</span>
+                </div>
+                <div class="h-1.5 w-full rounded-full bg-surface-container-high">
+                  <div class="h-1.5 w-[90%] rounded-full bg-primary"></div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div>
+                <div class="mb-space-md flex items-center justify-between">
+                  <div
+                    class="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-container-high font-label-md text-label-md font-bold text-tertiary"
+                  >
+                    #css
+                  </div>
+                  <span
+                    class="rounded bg-surface-container px-2.5 py-1 font-label-sm text-label-sm font-medium text-on-surface"
+                    >სტილიზაცია</span
+                  >
+                </div>
+                <h3
+                  class="mb-space-xs font-headline-md text-headline-md font-semibold text-on-surface"
+                >
+                  CSS3
+                </h3>
+                <p
+                  class="mb-space-md font-body-sm text-body-sm leading-relaxed text-on-surface-variant"
+                >
+                  Flexbox, CSS Grid სისტემები, რესპონსივ განლაგება და მედია
+                  ქუერები მოწყობილობათა სრული ადაპტაციისთვის.
+                </p>
+              </div>
+              <div
+                class="flex flex-col gap-1.5 rounded-lg bg-surface-container-low p-space-sm pt-space-sm"
+              >
+                <div
+                  class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"
+                >
+                  <span>მზადყოფნის დონე</span>
+                  <span class="font-semibold text-on-surface">მოწინავე</span>
+                </div>
+                <div class="h-1.5 w-full rounded-full bg-surface-container-high">
+                  <div class="h-1.5 w-[85%] rounded-full bg-tertiary"></div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div>
+                <div class="mb-space-md flex items-center justify-between">
+                  <div
+                    class="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-container-high font-label-md text-label-md font-bold text-primary-container"
+                  >
+                    tw:
+                  </div>
+                  <span
+                    class="rounded bg-surface-container px-2.5 py-1 font-label-sm text-label-sm font-medium text-on-surface"
+                    >ფრეიმვორკი</span
+                  >
+                </div>
+                <h3
+                  class="mb-space-xs font-headline-md text-headline-md font-semibold text-on-surface"
+                >
+                  Tailwind CSS
+                </h3>
+                <p
+                  class="mb-space-md font-body-sm text-body-sm leading-relaxed text-on-surface-variant"
+                >
+                  Utility-first მიდგომა, კომპონენტების სწრაფი და მოქნილი
+                  სტილიზაცია და დიზაინ-სისტემების ზუსტი იმპლემენტაცია.
+                </p>
+              </div>
+              <div
+                class="flex flex-col gap-1.5 rounded-lg bg-surface-container-low p-space-sm pt-space-sm"
+              >
+                <div
+                  class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"
+                >
+                  <span>მზადყოფნის დონე</span>
+                  <span class="font-semibold text-on-surface">პრაქტიკული</span>
+                </div>
+                <div class="h-1.5 w-full rounded-full bg-surface-container-high">
+                  <div class="h-1.5 w-[88%] rounded-full bg-primary-container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-space-3xl">
+          <div class="mb-space-lg flex items-center gap-space-sm">
+            <span
+              class="font-label-sm text-label-sm font-semibold uppercase tracking-widest text-tertiary"
+              >03 // მიმდინარე ფოკუსი</span
+            >
+            <div class="h-px max-w-[120px] flex-1 bg-surface-container-high"></div>
+          </div>
+          <div
+            class="mb-space-lg flex flex-col justify-between gap-space-sm md:flex-row md:items-end"
+          >
+            <div>
+              <h2
+                class="font-headline-lg text-headline-lg font-bold text-on-surface"
+              >
+                რას ვსწავლობ ახლა
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                ტექნოლოგიები, რომლებზეც ყოველდღიურად ვატარებ პრაქტიკას.
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-2 self-start rounded-lg bg-surface-container px-3 py-1.5 font-label-sm text-label-sm text-on-surface-variant"
+            >
+              <span class="h-2 w-2 animate-pulse rounded-full bg-primary-container"></span>
+              აქტიური სასწავლო პროცესი
+            </div>
+          </div>
+          <div class="grid grid-cols-1 gap-space-md md:grid-cols-3">
+            <div
+              class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-sm"
+            >
+              <div>
+                <div class="mb-space-sm flex items-center justify-between">
+                  <span
+                    class="font-label-md text-label-md font-semibold text-primary"
+                    >01 / JS</span
+                  >
+                  <span class="material-symbols-outlined text-[20px] text-primary"
+                    >bolt</span
+                  >
+                </div>
+                <h3
+                  class="mb-space-xs font-headline-sm text-headline-sm font-semibold text-on-surface"
+                >
+                  JavaScript (ES6+)
+                </h3>
+                <p
+                  class="mb-space-md font-body-sm text-body-sm leading-relaxed text-on-surface-variant"
+                >
+                  ES6+ საფუძვლები, DOM-ის დინამიკური მანიპულაცია და ასინქრონული
+                  მოთხოვნები (Fetch API, Promises).
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-space-xs">
+                <span
+                  class="rounded bg-surface-container px-2 py-0.5 font-label-sm text-label-sm text-on-surface-variant"
+                  >ES6 Modules</span
+                >
+                <span
+                  class="rounded bg-surface-container px-2 py-0.5 font-label-sm text-label-sm text-on-surface-variant"
+                  >Fetch API</span
+                >
+                <span
+                  class="rounded bg-surface-container px-2 py-0.5 font-label-sm text-label-sm text-on-surface-variant"
+                  >DOM</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-sm"
+            >
+              <div>
+                <div class="mb-space-sm flex items-center justify-between">
+                  <span
+                    class="font-label-md text-label-md font-semibold text-primary"
+                    >02 / GIT</span
+                  >
+                  <span class="material-symbols-outlined text-[20px] text-primary"
+                    >fork_right</span
+                  >
+                </div>
+                <h3
+                  class="mb-space-xs font-headline-sm text-headline-sm font-semibold text-on-surface"
+                >
+                  Git &amp; GitHub
+                </h3>
+                <p
+                  class="mb-space-md font-body-sm text-body-sm leading-relaxed text-on-surface-variant"
+                >
+                  ვერსიათა კონტროლი, ბრენჩინგის ლოგიკა, pull request-ები და
+                  გუნდური მუშაობის სამუშაო პროცესები.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-space-xs">
+                <span
+                  class="rounded bg-surface-container px-2 py-0.5 font-label-sm text-label-sm text-on-surface-variant"
+                  >Branches</span
+                >
+                <span
+                  class="rounded bg-surface-container px-2 py-0.5 font-label-sm text-label-sm text-on-surface-variant"
+                  >Commits</span
+                >
+                <span
+                  class="rounded bg-surface-container px-2 py-0.5 font-label-sm text-label-sm text-on-surface-variant"
+                  >Workflow</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-sm"
+            >
+              <div>
+                <div class="mb-space-sm flex items-center justify-between">
+                  <span
+                    class="font-label-md text-label-md font-semibold text-primary"
+                    >03 / REACT</span
+                  >
+                  <span class="material-symbols-outlined text-[20px] text-primary"
+                    >grain</span
+                  >
+                </div>
+                <h3
+                  class="mb-space-xs font-headline-sm text-headline-sm font-semibold text-on-surface"
+                >
+                  React.js საფუძვლები
+                </h3>
+                <p
+                  class="mb-space-md font-body-sm text-body-sm leading-relaxed text-on-surface-variant"
+                >
+                  კომპონენტური არქიტექტურის გაცნობა, JSX სინტაქსი, Props და
+                  საბაზისო State მენეჯმენტი.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-space-xs">
+                <span
+                  class="rounded bg-surface-container px-2 py-0.5 font-label-sm text-label-sm text-on-surface-variant"
+                  >Components</span
+                >
+                <span
+                  class="rounded bg-surface-container px-2 py-0.5 font-label-sm text-label-sm text-on-surface-variant"
+                  >Props</span
+                >
+                <span
+                  class="rounded bg-surface-container px-2 py-0.5 font-label-sm text-label-sm text-on-surface-variant"
+                  >State</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="mb-space-xl rounded-xl bg-surface-container-lowest p-space-xl shadow-sm md:p-space-2xl"
+        >
+          <div class="grid grid-cols-1 items-center gap-space-xl lg:grid-cols-12">
+            <div class="flex flex-col gap-space-md lg:col-span-7">
+              <div
+                class="inline-flex w-fit items-center gap-2 rounded-full bg-secondary-fixed px-3 py-1 font-label-sm text-label-sm text-on-secondary-fixed"
+              >
+                <span class="material-symbols-outlined text-[16px]">chat</span>
+                ღია ვარ შემოთავაზებებისთვის
+              </div>
+              <h2
+                class="font-headline-lg text-headline-lg font-bold text-on-surface"
+              >
+                მზად ხართ სასაუბროდ?
+              </h2>
+              <p
+                class="max-w-lg font-body-md text-body-md leading-relaxed text-on-surface-variant"
+              >
+                ვეძებ პირველ პროფესიულ შესაძლებლობას ან საინტერესო სტაჟირებას.
+                სიამოვნებით გავესაუბრები გუნდს, რომელსაც სუფთა კოდი და
+                ენთუზიაზმი აინტერესებს.
+              </p>
+              <div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+                <a
+                  class="inline-flex items-center gap-2 rounded-lg bg-primary-container px-5 py-3 font-body-sm text-body-sm font-medium text-on-primary shadow-sm transition-all hover:bg-primary"
+                  href="mailto:andria.urumashvilite06@geolab.edu.ge"
+                >
+                  <span class="material-symbols-outlined text-[18px]">send</span>
+                  მომწერეთ მეილზე
+                </a>
+                <a
+                  class="inline-flex items-center gap-2 rounded-lg bg-surface-container px-4 py-3 font-label-md text-label-md text-on-surface transition-all hover:bg-surface-container-high"
+                  href="https://github.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span class="material-symbols-outlined text-[18px]">terminal</span>
+                  GitHub
+                </a>
+                <a
+                  class="inline-flex items-center gap-2 rounded-lg bg-surface-container px-4 py-3 font-label-md text-label-md text-on-surface transition-all hover:bg-surface-container-high"
+                  href="https://linkedin.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span class="material-symbols-outlined text-[18px]">share</span>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-space-md rounded-xl bg-surface-container-low p-space-lg shadow-sm lg:col-span-5"
+            >
+              <span
+                class="font-title-md text-title-md font-semibold text-on-surface"
+                >სწრაფი კავშირი</span
+              >
+              <div class="flex flex-col gap-space-sm">
+                <div
+                  class="flex items-center gap-space-sm rounded-lg bg-surface-container-lowest p-space-sm"
+                >
+                  <div
+                    class="flex h-8 w-8 items-center justify-center rounded bg-primary-fixed text-on-primary-fixed"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >alternate_email</span
+                    >
+                  </div>
+                  <div class="min-w-0 flex flex-col">
+                    <span
+                      class="font-label-sm text-label-sm text-on-surface-variant"
+                      >ელფოსტა</span
+                    >
+                    <a
+                      class="truncate font-body-sm text-body-sm font-medium text-on-surface hover:underline"
+                      href="mailto:andria.urumashvilite06@geolab.edu.ge"
+                      >andria.urumashvilite06@geolab.edu.ge</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-space-sm rounded-lg bg-surface-container-lowest p-space-sm"
+                >
+                  <div
+                    class="flex h-8 w-8 items-center justify-center rounded bg-surface-container-highest text-tertiary"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >schedule</span
+                    >
+                  </div>
+                  <div class="min-w-0 flex flex-col">
+                    <span
+                      class="font-label-sm text-label-sm text-on-surface-variant"
+                      >პასუხის დრო</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm font-medium text-on-surface"
+                      >24 საათის განმავლობაში</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer
+      class="w-full border-t border-outline-variant/30 bg-surface-container-lowest py-space-xl"
+    >
+      <div class="mx-auto max-w-[1140px] px-margin-mobile md:px-margin">
+        <div
+          class="flex flex-col items-center justify-between gap-space-lg md:flex-row"
+        >
+          <div class="flex flex-col items-center gap-1 md:items-start">
+            <div class="flex items-center gap-2">
+              <span
+                class="font-headline-sm text-headline-sm font-semibold text-on-surface"
+                >ანდრია ურუმაშვილი</span
+              >
+              <span
+                class="rounded bg-surface-container px-2 py-0.5 font-label-sm text-label-sm text-on-surface-variant"
+                >Junior Dev</span
+              >
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              &copy; 2026. შექმნილია სიყვარულით და სუფთა კოდით.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-space-md">
+            <a
+              class="flex items-center gap-1.5 rounded-lg bg-surface-container-low px-3 py-1.5 font-label-md text-label-md text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+              href="mailto:andria.urumashvilite06@geolab.edu.ge"
+            >
+              <span class="material-symbols-outlined text-[16px]">mail</span>
+              andria.urumashvilite06@geolab.edu.ge
+            </a>
+            <a
+              class="flex items-center gap-1.5 rounded-lg bg-surface-container-low px-3 py-1.5 font-label-md text-label-md text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+              href="https://github.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span class="material-symbols-outlined text-[16px]">terminal</span>
+              GitHub
+            </a>
+            <a
+              class="flex items-center gap-1.5 rounded-lg bg-surface-container-low px-3 py-1.5 font-label-md text-label-md text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+              href="https://linkedin.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span class="material-symbols-outlined text-[16px]">share</span>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <div
+          class="mt-space-lg flex flex-col items-center justify-between gap-2 border-t border-outline-variant/20 pt-space-md text-on-surface-variant sm:flex-row"
+        >
+          <span class="font-label-sm text-label-sm">თბილისი, საქართველო</span>
+          <span class="font-label-sm text-label-sm"
+            >Modern Web Architecture &amp; Craft</span
+          >
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/nav.js"></script>
+  </body>
+</html>
